@@ -1,0 +1,117 @@
+@import url('./webFonts.css');
+@import url('./common.css');
+
+
+body {
+    margin: 0;
+    color: #fcf4e8;
+    background-color: #141414;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+
+
+#title {
+    margin: 1px 0 1% 0;
+    padding: 2%;
+    font-size: 1.8em;
+
+    /* height: 10vh; */
+    max-height: 20vh;
+}
+
+.pageKind {
+    border-radius: 10px;
+    margin: 2% 0;
+    padding: 1%;
+
+    position: relative;
+    height: 20vh;
+}
+
+.banner-text {
+    /* 對齊父元素垂直置中 */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    text-align: left;
+    left: 4%;
+
+    cursor: pointer;
+}
+
+.bannerText1 {
+    font-size: 2.4em;
+}
+
+.bannerText2 {
+    font-size: 1.6em;
+}
+
+
+
+/* **************************************************** */
+
+#title {
+    text-align: center;
+    background-color: #a8865d;
+    border-top: 2px solid #c2ac84;
+    border-bottom: 2px solid #c2ac84;
+}
+
+
+
+/* 占卜方式的背景圖片要與背景融合 */
+.pageKind {
+    /* background-image: url("../pic/Learning.png"), linear-gradient(to right, red, yellow 20%, transparent 50%); */
+    background-blend-mode: multiply;
+
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.bannerText1 {
+    font-family: "Zen Old Mincho", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.bannerText2 {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* ************************************************ */
+
+
+/* 設定圖片來源 */
+
+.pageKind:nth-child(4n+1) {
+    border: 2px solid #006c5a;
+    background-image: url("../pic/Today.png"), linear-gradient(to right, #004d40, transparent 50%);
+}
+
+.pageKind:nth-child(4n+2) {
+    /* #10423e */
+    /* border: 2px solid #2a635a; */
+    border: 2px solid #949127;
+    background-image: url("../pic/YesNo.png"), linear-gradient(to right, #68651b, transparent 50%);
+}
+
+.pageKind:nth-child(4n+3) {
+    /* border: 2px solid #314775; */
+
+    border: 2px solid #314775;
+    background-image: url("../pic/Future.png"), linear-gradient(to right, #152a59, transparent 50%);
+}
+
+.pageKind:nth-child(4n) {
+    border: 2px solid #824517;
+    background-image: url("../pic/Learning.png"), linear-gradient(to right, #603311, transparent 50%);
+}

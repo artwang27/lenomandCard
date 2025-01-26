@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷諾曼占卜</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Zen+Old+Mincho:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="selectCards.css">
+</head>
+
+<body class="makeCenter">
+    <div id="main">
+
+        <header id="title">
+            <div id="title1">雷諾曼占卜</div>
+            <div id="title2">點選您要抽的卡牌</div>
+        </header>
+
+        <!-- 選卡區 -->
+        <div id="container">
+
+            <!-- <div class="card cardFaceOn">
+                <div class="face">
+                    <div class="card_num">29</div>
+                    <div class="card_nameZh">女人</div>
+                </div>
+            </div>  -->
+
+
+
+
+
+            <!-- 
+            【卡牌正面或反面是由程式直接決定為 cardFaceOn 或者 cardFaceOff】        
+
+            【當卡牌要顯示正面時】(若要顯示反面時，改為 cardFaceOff)
+                
+            <div class="card cardFaceOn">
+                <div class="face">
+                    <div class="card_num">29</div>
+                    <div class="card_nameZh">女人</div>
+                </div>
+            </div> 
+
+            -->
+
+
+            <!-- 
+            <div class="card">卡牌1</div>
+            <div class="card" style="order:-1">卡牌2</div>
+            <div class="card" style="order:-2">卡牌3</div>
+            <div class="card">卡牌4</div>
+            <div class="card">卡牌5</div>
+            <div class="card">卡牌6</div> 
+            -->
+
+        </div> <!-- end of container -->
+
+
+        <!-- 被選中的卡集中放在這邊 -->
+        <div id="choosedArea" class="makeCenter"></div>
+
+
+        <!-- 若玩家沒選卡牌，就按下了選擇完畢，這時要做提醒 -->
+        <div id="errorMessageButton" class="alignToParentCenter textNoWrap">
+            <div>抱歉！</div>
+            <div>您至少要選一張牌</div>
+        </div>
+
+        <footer id="nextPage" class="makeCenter">選擇完畢</footer>
+
+    </div><!-- end of main -->
+
+    <script type="module" src="../dist/selectCards-app.js"></script>
+
+</body>
+
+</html>
