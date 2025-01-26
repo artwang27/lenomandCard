@@ -1,11 +1,10 @@
-
 /* 這個是讓內容置中的 */
 .makeCenter {
     display: flex;
-    /*水平置中*/    
+    /*水平置中*/
     justify-content: center;
     /*垂直置中*/
-    align-items: center;   
+    align-items: center;
 }
 
 
@@ -19,10 +18,10 @@ position: absolute; */
 .alignToParentCenter {
     position: absolute;
     left: 50%;
-    top: 50%;    
+    top: 50%;
     transform: translate(-50%, -50%);
     /* 文字置中 */
-    text-align: center; 
+    text-align: center;
 
 
 
@@ -36,14 +35,27 @@ position: absolute; */
 
 
 /* 光暈效果 */
-.makeHalo{
+.makeHalo {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 
 /* 讓文字不換行，寬度也會跟著改變 */
-.textNoWrap{
+.textNoWrap {
     white-space: nowrap;
+}
+
+
+/* 讓文字無法被選取 */
+.no-select {
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Standard syntax */
 }
 
 
