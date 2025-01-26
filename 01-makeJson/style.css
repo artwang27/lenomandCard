@@ -1,0 +1,11 @@
+body{
+    margin: 20;
+    font-size: 2rem;
+}
+
+#explain{
+    margin: 120px;
+    padding: 20px;
+    border: 1px solid #000;
+    background-color: burlywood
+}

@@ -1,0 +1,102 @@
+/* 調整到父容器的正中間 */
+.adjustToCenterXY {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+body {
+    margin: 0;
+    background-color:#141414;
+
+    font-family: "Noto Sans TC", system-ui;
+}
+
+
+/* 經果我精密計算結果，請在 main 裡設定 font 大小
+font-size: 20px; 適用於以電腦螢幕模擬手機執行結果
+font-size: 17px; 大型行動裝置 */
+
+/* 讓 main 在螢幕的正中間 */
+#main {
+    /* 把 main 擺到螢幕正中間 */
+    margin: 0 auto;
+    /* 佔滿螢幕高度 */
+    height: 100vh;
+
+    width: 100%;
+
+    /* 這是精密計算結果，模擬大型行動裝置在電腦螢幕等比例執行時，所得出的參數 */
+    max-width: 500px;
+    font-size: 20px;
+}
+
+
+/* 在手機的樣式 */
+@media only screen and (max-width: 600px) {
+    #main {
+        /* 在手機上寬度為全屏幕 */
+        width: 100vw;
+
+        /* 這是精密計算結果 */
+        font-size: 17px;
+    }
+}
+
+
+#logo-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    /* 使子元素置中 */
+    display: flex;
+    justify-content: center;
+
+    /* 保證 logo 顯示在最上方 */
+    z-index: 9999;
+}
+
+
+
+#game-title {
+    position: absolute;
+    top: 10%;
+
+    color: aliceblue;
+    font-weight: 900;
+    font-size: 2.8em;
+}
+
+
+#arthur {
+    position: absolute;
+    top: 85%;
+
+    /* 這個屬性值會讓元素內的文字在同一行上一直延伸，直到遇到 <br> 標籤或容器的邊界 */
+    white-space: nowrap;
+
+    color: aliceblue;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+/* ************************************************************** */
+
+
+/* 當使用 background-color 做 fadeIn 時:  */
+.fadeBackgroundColor {
+    opacity: 1;
+    background-color: silver;
+    /* 由程式控制 transition: background-color 3s ease-in; */
+}
+
+
+/* 當使用透明度 opacity 做 fadeIn 時:  */
+.fadeInOpacity {
+    opacity: 0;
+    background-color: black;
+    transition: opacity 3s ease-in-out;
+}

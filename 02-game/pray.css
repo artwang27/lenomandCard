@@ -1,0 +1,118 @@
+@import url('./webFonts.css');
+@import url('./common.css');
+
+
+body {
+    margin: 0;
+    background-color: #141414;
+    text-align: center;
+    /* font-family: Arial, Helvetica, sans-serif;     */
+}
+
+
+/* ************************************** */
+/* 布局：鎖定位置 */
+
+.container {
+    /* 确保父元素高度为视口高度，以便百分比计算生效 */
+    position: relative;
+    height: 100vh;
+}
+
+
+/* 背景圖案 */
+.bkgImage {
+    position: absolute;
+    width: 100%;
+    height:100%;
+}
+
+
+.title {
+    /* 水平居中 */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    top: 4%;
+    font-size: 3em;    
+}
+
+
+#hint-text {
+    /* 位於父容器的水平居中 */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    top: 60%;
+    font-size: 1.6em;
+}
+
+
+#hint-text{
+    box-sizing: border-box;
+    padding: 4% 0;
+
+    width: 100%
+}
+
+
+
+/* ************************************** */
+
+/* 字體、顏色  */
+
+
+.bkgImage {
+    
+    /* 背景漸層變化，並且和影像合成  */
+    background-image:
+        linear-gradient(to bottom, #9931c9, transparent 30%, transparent 50%, #9931c9 90%),
+        url("../pic/Pray.jpg");
+
+    background-blend-mode: multiply;
+
+    border: 2px solid #b382ca;
+    border-radius: 10px;
+}
+
+.bkgImage{
+    background-position: center;
+    background-repeat: no-repeat;
+    /*超出指定大小的部分會被裁切*/
+    background-size: cover;    
+}
+
+
+.title {
+    color: white;
+    text-shadow: 0px 0px 8px hsl(60, 100%, 60%);
+
+    font-family: "Zen Old Mincho", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+#hint-text {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    color: #e4b0fc;
+    border-top: 2px solid #e4b0fc;
+    border-bottom: 2px solid #e4b0fc;
+    background-color: #7705ab;
+  
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+
+/* 當位於 today 頁面時，背景反轉 */
+#today .bkgImage{
+    transform: scaleX(-1);
+}
+
+
