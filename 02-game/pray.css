@@ -24,7 +24,7 @@ body {
 .bkgImage {
     position: absolute;
     width: 100%;
-    height:100%;
+    height: 100%;
 }
 
 
@@ -35,7 +35,7 @@ body {
     transform: translateX(-50%);
 
     top: 4%;
-    font-size: 3em;    
+    font-size: 3em;
 }
 
 
@@ -50,7 +50,7 @@ body {
 }
 
 
-#hint-text{
+#hint-text {
     box-sizing: border-box;
     padding: 4% 0;
 
@@ -65,11 +65,11 @@ body {
 
 
 .bkgImage {
-    
+
     /* 背景漸層變化，並且和影像合成  */
-    background-image:
+    /* background-image:
         linear-gradient(to bottom, #9931c9, transparent 30%, transparent 50%, #9931c9 90%),
-        url("../pic/Pray.jpg");
+        url("../pic/Pray.jpg"); */
 
     background-blend-mode: multiply;
 
@@ -77,11 +77,11 @@ body {
     border-radius: 10px;
 }
 
-.bkgImage{
+.bkgImage {
     background-position: center;
     background-repeat: no-repeat;
     /*超出指定大小的部分會被裁切*/
-    background-size: cover;    
+    background-size: cover;
 }
 
 
@@ -104,15 +104,27 @@ body {
     border-top: 2px solid #e4b0fc;
     border-bottom: 2px solid #e4b0fc;
     background-color: #7705ab;
-  
+
     opacity: 0.85;
     cursor: pointer;
 }
 
 
-/* 當位於 today 頁面時，背景反轉 */
-#today .bkgImage{
-    transform: scaleX(-1);
+
+#yesNo .bkgImage {
+    /* 背景漸層變化，並且和影像合成  */
+    background-image:
+        linear-gradient(to bottom, #9931c9, transparent 30%, transparent 50%, #9931c9 90%),
+        url("../pic/Pray.jpg");
+
 }
 
 
+#today .bkgImage {
+    /* 當位於 today 頁面時，背景反轉 */
+    /* transform: scaleX(-1); */
+
+    background-image:
+        linear-gradient(to bottom, #9931c9, transparent 30%, transparent 50%, #9931c9 90%),
+        url("../pic/prayToday.png");
+}
