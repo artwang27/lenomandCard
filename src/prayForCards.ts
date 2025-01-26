@@ -13,7 +13,7 @@ setInterval(() => {
     // 確保不重複
     do {
         rnd = Math.floor(Math.random() * 36);
-    } while (rnd in godNumberAry);
+    } while (godNumberAry.includes(rnd) );
 
     // 存入 godNumberAry
     godNumberAry[index++] = rnd;
@@ -29,5 +29,4 @@ export function prayForCards(n: number) {
     // 使用 slice() 方法取出前 n 個元素
     return godNumberAry.slice(0, n)
 }
-
 
