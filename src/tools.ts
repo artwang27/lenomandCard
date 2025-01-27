@@ -1,5 +1,5 @@
 import { sendData, queryKind } from "./dataType";
-import { saveData } from "./shareData.js";
+import { saveData, loadData } from "./shareData.js";
 
 
 //儲存檔案間要傳遞的資料(例如:選中的卡牌)後，跳到下一頁
@@ -57,7 +57,7 @@ function domAppendClass(id: string, newClassName: string) {
 
 
 // 更改網頁標題--title 的內容
-export function setWebPageTitle(titleString:string){
+export function setWebPageTitle(titleString: string) {
     // 獲取 <title> 元素，更改網頁標題
     const titleElement = document.querySelector('title');
     if (titleElement) {
@@ -65,3 +65,18 @@ export function setWebPageTitle(titleString:string){
     }
 }
 
+
+//檢查是否有 arthur 的授權
+export function checkLicense(): boolean {
+    const loadMyData = loadData<sendData>();
+    if (!loadMyData) {
+        console.error('sendData沒有傳遞資料');
+        return false;
+    }
+
+    if (loadMyData.fromPage !== 'Arthur.html') {
+        return false;
+    }
+
+    return true;
+}

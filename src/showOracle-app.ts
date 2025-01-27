@@ -1,7 +1,7 @@
 import { sendData } from "./dataType.js";
 import { loadData } from "./shareData.js";
 import { createOracleCard } from "./createOracleCard.js";
-import { removeDom, setWebPageTitle } from "./tools.js";
+import { removeDom, setWebPageTitle, saveDataAndGoToNextPage } from "./tools.js";
 
 
 function createDom(domId: string, parent: HTMLElement): HTMLElement {
@@ -87,6 +87,14 @@ function makeHtmlToday(cards: number[]) {
 }
 
 
+// 指定返回 main.html  並且加密
+function setBackMainPageLink() {
+    document.getElementById("backMainPage")?.addEventListener("click", () => {
+        saveDataAndGoToNextPage("main.html", "亞瑟王", [], 'Arthur.html');
+    });
+
+}
+
 
 function main() {
     const loadMyData = loadData<sendData>();
@@ -112,6 +120,8 @@ function main() {
             makeHtmlYesNo(choosedCards);
             break;
     }
+
+    setBackMainPageLink();    
 }
 
 

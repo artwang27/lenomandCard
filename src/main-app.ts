@@ -1,7 +1,8 @@
-import { saveDataAndGoToNextPage } from "./tools.js";
+import { saveDataAndGoToNextPage,checkLicense } from "./tools.js";
 
 
 function active(){
+    if(!checkLicense()) return;
 
     document.getElementById("today")?.addEventListener("click", ()=>{
         saveDataAndGoToNextPage("pray.html","今日");

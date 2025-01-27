@@ -7,7 +7,7 @@ export type Card = {
 
 
 //要占問哪一種情況
-export type queryKind= "占卜" | "學習" | "今日" | "是否";
+export type queryKind= "占卜" | "學習" | "今日" | "是否" | "亞瑟王";
 
 //在檔案(html檔)之間資料傳遞
 export interface sendData {
